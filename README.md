@@ -1,5 +1,7 @@
 # Ray.IdentityValueModule
 
+[![Build Status](https://travis-ci.org/ray-di/Ray.IdentityValueModule.svg?branch=master)](https://travis-ci.org/ray-di/Ray.IdentityValueModule)
+
 ## Overview
 
 `Ray.IdentityValueModule` injects identify value such as current time or UUID.
