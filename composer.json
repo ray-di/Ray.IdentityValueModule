@@ -10,8 +10,8 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "ramsey/uuid": "^3.7",
-        "ray/di": "^2.7"
+        "ramsey/uuid": "^3.8",
+        "ray/di": "^2.7.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
