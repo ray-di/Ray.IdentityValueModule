@@ -12,4 +12,9 @@ final class Now implements NowInterface
     {
         return (new \DateTime)->format('Y-m-d H:i:s');
     }
+
+    public function iso8601() : string
+    {
+        return (new \DateTime)->format(\DateTime::ATOM); // 2019-06-02T04:38:25+02:00
+    }
 }

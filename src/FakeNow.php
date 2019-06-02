@@ -14,4 +14,9 @@ final class FakeNow implements NowInterface
     {
         return (new \DateTime(self::VALUE))->format('Y-m-d H:i:s');
     }
+
+    public function iso8601() : string
+    {
+        return (new \DateTime(self::VALUE))->format(\DateTime::ATOM);
+    }
 }
