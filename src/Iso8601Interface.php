@@ -6,8 +6,6 @@
  */
 namespace Ray\IdentityValueModule;
 
-use function in_array;
-
 interface Iso8601Interface
 {
     /**
