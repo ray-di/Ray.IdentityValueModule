@@ -6,7 +6,6 @@
  */
 namespace Ray\IdentityValueModule;
 
-use const DATE_ATOM;
 use DateTime;
 use PHPUnit\Framework\TestCase;
 use Ray\Di\Injector;

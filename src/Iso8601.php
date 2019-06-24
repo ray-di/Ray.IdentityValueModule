@@ -14,7 +14,7 @@ final class Iso8601
     {
         return (new \DateTime($dateTime))->format(\DateTime::ATOM);
     }
-    
+
     public function convertList(array $assocList, array $columns) : array
     {
         $list = $assocList;
