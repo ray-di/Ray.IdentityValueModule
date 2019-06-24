@@ -8,10 +8,10 @@ namespace Ray\IdentityValueModule;
 
 class FakeUuid implements UuidInterface
 {
-    const VALUE = '11111111-2222-3333-4444-4fdffa026136';
+    public static $uuid = 0;
 
     public function __toString() : string
     {
-        return self::VALUE;
+        return (string) self::$uuid++;
     }
 }

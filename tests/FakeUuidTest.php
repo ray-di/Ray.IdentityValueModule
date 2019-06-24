@@ -14,6 +14,7 @@ class FakeUuidTest extends TestCase
     public function testIsInstanceOfIdentityValueModule()
     {
         $uuid = (new Injector(new FakeIdentityValueModule()))->getInstance(UuidInterface::class);
-        $this->assertSame(FakeUuid::VALUE, (string) $uuid);
+        $this->assertSame('0', (string) $uuid);
+        $this->assertSame('1', (string) $uuid);
     }
 }
