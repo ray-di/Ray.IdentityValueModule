@@ -17,5 +17,6 @@ class IdentityValueModule extends AbstractModule
     {
         $this->bind(UuidInterface::class)->to(Uuid::class);
         $this->bind(NowInterface::class)->to(Now::class);
+        $this->bind(DbDateTimeInterface::class)->to(DbDateTime::class);
     }
 }
