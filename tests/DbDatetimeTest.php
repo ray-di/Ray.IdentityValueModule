@@ -12,7 +12,7 @@ use Ray\Di\Injector;
 class DbDatetimeTest extends TestCase
 {
     /**
-     * @var NowInterface
+     * @var DbDateTimeInterface
      */
     protected $datetime;
 
