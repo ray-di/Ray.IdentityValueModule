@@ -8,13 +8,19 @@ namespace Ray\IdentityValueModule;
 
 use function in_array;
 
-final class Iso8601
+final class Iso8601 implements Iso8601Interface
 {
-    public function convertOne(string $dateTime)
+    /**
+     * {@inheritdoc}
+     */
+    public function convertOne(string $dateTime) : string
     {
         return (new \DateTime($dateTime))->format(\DateTime::ATOM);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function convertList(array $assocList, array $columns) : array
     {
         $list = $assocList;
