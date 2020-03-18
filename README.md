@@ -10,7 +10,7 @@
 
 ### Composer install
 
-    $ composer require ray/indentify-value-module
+    $ composer require ray/identify-value-module
  
 ### Module install
 
