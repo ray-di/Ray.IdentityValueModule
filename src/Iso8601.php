@@ -8,6 +8,7 @@ use DateTime;
 
 use function assert;
 use function in_array;
+use function is_int;
 use function is_string;
 
 final class Iso8601 implements Iso8601Interface
@@ -27,10 +28,11 @@ final class Iso8601 implements Iso8601Interface
     {
         $list = $assocList;
         foreach ($list as &$row) {
+            /** @psalm-suppress MixedAssignment */
             foreach ($row as $column => &$value) {
-                assert(is_string($value));
+                assert(is_int($value) || is_string($value));
                 if (in_array($column, $columns, true)) {
-                    $value = (new DateTime($value))->format(DateTime::ATOM);
+                    $value = (new DateTime((string) $value))->format(DateTime::ATOM);
                 }
             }
         }
