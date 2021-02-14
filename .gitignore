@@ -1,7 +1,9 @@
 /vendor/
 /build/
-/.idea/
-
+/tests/tmp/
+/.phpcs-cache
+/.phpunit.result.cache
 /composer.lock
-/phpunit.xml
-/.php_cs.cache
+/coverage.xml
+/vendor-bin/**/vendor
+.php_cs.cache
