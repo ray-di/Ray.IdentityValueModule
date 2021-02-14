@@ -1,9 +1,7 @@
 <?php
-/**
- * This file is part of the Ray.IdentityValueModule
- *
- * @license http://opensource.org/licenses/MIT MIT
- */
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
 
 interface UuidInterface
@@ -11,5 +9,5 @@ interface UuidInterface
     /**
      * Return UUID string
      */
-    public function __toString() : string;
+    public function __toString(): string;
 }

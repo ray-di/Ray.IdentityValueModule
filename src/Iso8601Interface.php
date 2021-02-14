@@ -1,9 +1,7 @@
 <?php
-/**
- * This file is part of the Ray.IdentityValueModule
- *
- * @license http://opensource.org/licenses/MIT MIT
- */
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
 
 interface Iso8601Interface
@@ -11,7 +9,7 @@ interface Iso8601Interface
     /**
      * Convert $dateTime to Iso8601 dateTime
      */
-    public function convertOne(string $dateTime) : string;
+    public function convertOne(string $dateTime): string;
 
     /**
      * Convert $dateTime to Iso8601 dateTime from assoc list with selected $columns
@@ -21,5 +19,5 @@ interface Iso8601Interface
      *
      * @return list<array<string, mixed>>
      */
-    public function convertList(array $assocList, array $columns) : array;
+    public function convertList(array $assocList, array $columns): array;
 }

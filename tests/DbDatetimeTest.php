@@ -1,9 +1,7 @@
 <?php
-/**
- * This file is part of the Ray.IdentityValueModule
- *
- * @license http://opensource.org/licenses/MIT MIT
- */
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
 
 use InvalidArgumentException;
@@ -12,9 +10,7 @@ use Ray\Di\Injector;
 
 class DbDatetimeTest extends TestCase
 {
-    /**
-     * @var DbDateTimeInterface
-     */
+    /** @var DbDateTimeInterface */
     protected $datetime;
 
     protected function setUp(): void

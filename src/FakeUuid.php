@@ -1,9 +1,7 @@
 <?php
-/**
- * This file is part of the Ray.IdentityValueModule
- *
- * @license http://opensource.org/licenses/MIT MIT
- */
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
 
 class FakeUuid implements UuidInterface
@@ -11,7 +9,7 @@ class FakeUuid implements UuidInterface
     /** @var int */
     public static $uuid = 0;
 
-    public function __toString() : string
+    public function __toString(): string
     {
         return (string) self::$uuid++;
     }

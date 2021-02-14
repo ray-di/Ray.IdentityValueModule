@@ -1,13 +1,13 @@
 <?php
-/**
- * This file is part of the Ray.IdentityValueModule
- *
- * @license http://opensource.org/licenses/MIT MIT
- */
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
 
 use PHPUnit\Framework\TestCase;
 use Ray\Di\Injector;
+
+use function assert;
 
 class FakeNowTest extends TestCase
 {

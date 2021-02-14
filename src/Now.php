@@ -1,22 +1,22 @@
 <?php
-/**
- * This file is part of the Koriym.Now
- *
- * @license http://opensource.org/licenses/MIT MIT
- */
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
+
+use DateTime;
 
 final class Now implements NowInterface
 {
-    const MYSQL_DATETIME = 'Y-m-d H:i:s';
+    public const MYSQL_DATETIME = 'Y-m-d H:i:s';
 
-    public function __toString() : string
+    public function __toString(): string
     {
-        return (new \DateTime)->format(self::MYSQL_DATETIME);
+        return (new DateTime())->format(self::MYSQL_DATETIME);
     }
 
-    public function iso8601() : string
+    public function iso8601(): string
     {
-        return (new \DateTime)->format(\DateTime::ATOM); // 2019-06-02T04:38:25+02:00
+        return (new DateTime())->format(DateTime::ATOM); // 2019-06-02T04:38:25+02:00
     }
 }

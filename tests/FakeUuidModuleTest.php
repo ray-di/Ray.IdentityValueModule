@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
 
 use PHPUnit\Framework\TestCase;
@@ -8,7 +11,7 @@ class FakeUuidModuleTest extends TestCase
 {
     public function testFakeUUidModule(): void
     {
-        $uuid = (new Injector(new FakeIdentityValueModule(new FakeUuidModule)))->getInstance(UuidInterface::class);
+        $uuid = (new Injector(new FakeIdentityValueModule(new FakeUuidModule())))->getInstance(UuidInterface::class);
         $this->assertInstanceOf(FakeUuid::class, $uuid);
     }
 }

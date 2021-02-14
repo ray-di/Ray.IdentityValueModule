@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
 
 use DateTime;
@@ -6,7 +9,7 @@ use InvalidArgumentException;
 
 final class DbDateTime implements DbDateTimeInterface
 {
-    public function __invoke(string $iso8601DateTime) : string
+    public function __invoke(string $iso8601DateTime): string
     {
         $dateTime = DateTime::createFromFormat(DateTime::ATOM, $iso8601DateTime);
         if (! $dateTime instanceof DateTime) {
