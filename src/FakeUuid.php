@@ -8,6 +8,7 @@ namespace Ray\IdentityValueModule;
 
 class FakeUuid implements UuidInterface
 {
+    /** @var int */
     public static $uuid = 0;
 
     public function __toString() : string

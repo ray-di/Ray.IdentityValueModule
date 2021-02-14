@@ -25,6 +25,7 @@ final class Iso8601 implements Iso8601Interface
     {
         $list = $assocList;
         foreach ($list as &$row) {
+            /** @var string $value */
             foreach ($row as $column => &$value) {
                 if (in_array($column, $columns, true)) {
                     $value = (new \DateTime($value))->format(\DateTime::ATOM);
