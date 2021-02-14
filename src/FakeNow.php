@@ -1,22 +1,23 @@
 <?php
-/**
- * This file is part of the Koriym.Now
- *
- * @license http://opensource.org/licenses/MIT MIT
- */
+
+declare(strict_types=1);
+
 namespace Ray\IdentityValueModule;
+
+use DateTime;
 
 final class FakeNow implements NowInterface
 {
-    const VALUE = '1970-01-01 00:00:00';
+    public const VALUE = '1970-01-01 00:00:00';
+    public const ISO8601 = '1970-01-01T00:00:00+00:00';
 
-    public function __toString() : string
+    public function __toString(): string
     {
-        return (new \DateTime(self::VALUE))->format('Y-m-d H:i:s');
+        return (new DateTime(self::VALUE))->format('Y-m-d H:i:s');
     }
 
-    public function iso8601() : string
+    public function iso8601(): string
     {
-        return (new \DateTime(self::VALUE))->format(\DateTime::ATOM);
+        return (new DateTime(self::VALUE))->format(DateTime::ATOM);
     }
 }
