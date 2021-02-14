@@ -9,6 +9,7 @@ namespace Ray\IdentityValueModule;
 final class FakeNow implements NowInterface
 {
     const VALUE = '1970-01-01 00:00:00';
+    const ISO8601 = '1970-01-01T00:00:00+00:00';
 
     public function __toString() : string
     {

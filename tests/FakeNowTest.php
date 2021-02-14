@@ -17,4 +17,12 @@ class FakeNowTest extends TestCase
         $nowString = (string) $now;
         $this->assertSame(FakeNow::VALUE, $nowString);
     }
+
+    public function testIso8601(): void
+    {
+        $now = (new Injector(new FakeIdentityValueModule()))->getInstance(NowInterface::class);
+        assert($now instanceof NowInterface);
+        $nowString = $now->iso8601();
+        $this->assertSame(FakeNow::ISO8601, $nowString);
+    }
 }

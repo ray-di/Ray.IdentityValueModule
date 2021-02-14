@@ -6,6 +6,7 @@
  */
 namespace Ray\IdentityValueModule;
 
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Ray\Di\Injector;
 
@@ -25,5 +26,11 @@ class DbDatetimeTest extends TestCase
     {
         $actual = ($this->datetime)('2005-08-15T15:52:01+00:00');
         $this->assertSame('2005-08-15 15:52:01', $actual);
+    }
+
+    public function testIvaliDate(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        ($this->datetime)('invalid');
     }
 }
