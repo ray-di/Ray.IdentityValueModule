@@ -17,18 +17,18 @@ class NowTest extends TestCase
      */
     protected $now;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->now = (new Injector(new IdentityValueModule()))->getInstance(NowInterface::class);
     }
 
-    public function testMySqlDateFormat()
+    public function testMySqlDateFormat(): void
     {
         $nowString = (string) $this->now;
         $this->assertSame((new \DateTime($nowString))->format('Y-m-d H:i:s'), $nowString);
     }
 
-    public function testIso8601Format()
+    public function testIso8601Format(): void
     {
         $nowString = $this->now->iso8601();
         $this->assertSame((new \DateTime($nowString))->format(DateTime::ATOM), $nowString);

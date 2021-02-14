@@ -11,7 +11,7 @@ use Ray\Di\Injector;
 
 class FakeNowTest extends TestCase
 {
-    public function testIsInstanceOfIdentityValueModule()
+    public function testIsInstanceOfIdentityValueModule(): void
     {
         $now = (new Injector(new FakeIdentityValueModule()))->getInstance(NowInterface::class);
         $nowString = (string) $now;

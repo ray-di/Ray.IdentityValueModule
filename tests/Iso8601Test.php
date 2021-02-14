@@ -5,13 +5,13 @@ use PHPUnit\Framework\TestCase;
 
 class Iso8601Test extends TestCase
 {
-    public function testConvertOne()
+    public function testConvertOne(): void
     {
         $actul = (new Iso8601)->convertOne('1970-01-01 00:00:00');
         $this->assertSame('1970-01-01T00:00:00+00:00', $actul);
     }
 
-    public function testconvertList()
+    public function testconvertList(): void
     {
         $list = [
             ['a' => 0, 'created' => '1970-01-01 00:00:00'],

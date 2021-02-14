@@ -6,7 +6,7 @@ use Ray\Di\Injector;
 
 class FakeUuidModuleTest extends TestCase
 {
-    public function testFakeUUidModule()
+    public function testFakeUUidModule(): void
     {
         $uuid = (new Injector(new FakeIdentityValueModule(new FakeUuidModule)))->getInstance(UuidInterface::class);
         $this->assertInstanceOf(FakeUuid::class, $uuid);

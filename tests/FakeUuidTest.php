@@ -11,7 +11,7 @@ use Ray\Di\Injector;
 
 class FakeUuidTest extends TestCase
 {
-    public function testIsInstanceOfIdentityValueModule()
+    public function testIsInstanceOfIdentityValueModule(): void
     {
         $uuid = (new Injector(new FakeIdentityValueModule()))->getInstance(UuidInterface::class);
         $this->assertSame('0', (string) $uuid);
