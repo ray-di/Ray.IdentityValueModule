@@ -16,7 +16,7 @@
 
 ```php
 use Ray\Di\AbstractModule;
-use Ray\IdentityValueModule;
+use Ray\IdentityValueModule\IdentityValueModule;
 
 class AppModule extends AbstractModule
 {
@@ -37,11 +37,16 @@ class Foo
     private $now;
     private $iso8601;
     
-    public function __construct(UuidInterface $uuid, NowInterface $now, Iso8601Interface $iso8601)
+    public function __construct(
+        UuidInterface $uuid,
+        NowInterface $now,
+        Iso8601Interface $iso8601
+        DateTimeIntetface $dateTime)
     {
         $this->uuid = $uuid;
         $this->now = $now;
         $this->iso8601 = $iso8601;
+        $this->dateTime = $dateTime; // Current time
     }
     
     public function foo()
