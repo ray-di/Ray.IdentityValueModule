@@ -2,8 +2,7 @@
 /build/
 /tests/tmp/
 /.phpcs-cache
-/.phpunit.result.cache
+/.phpunit.cache
 /composer.lock
 /coverage.xml
 /vendor-bin/**/vendor
-.php_cs.cache

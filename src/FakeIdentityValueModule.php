@@ -11,7 +11,7 @@ use Ray\Di\AbstractModule;
 class FakeIdentityValueModule extends AbstractModule
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function configure()
     {
