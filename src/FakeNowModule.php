@@ -11,7 +11,7 @@ use Ray\Di\AbstractModule;
 class FakeNowModule extends AbstractModule
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function configure()
     {

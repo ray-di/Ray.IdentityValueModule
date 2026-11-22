@@ -1,6 +1,6 @@
 # Ray.IdentityValueModule
 
-[![Build Status](https://travis-ci.org/ray-di/Ray.IdentityValueModule.svg?branch=master)](https://travis-ci.org/ray-di/Ray.IdentityValueModule)
+[![Continuous Integration](https://github.com/ray-di/Ray.IdentityValueModule/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/ray-di/Ray.IdentityValueModule/actions/workflows/continuous-integration.yml)
 
 ## Overview
 

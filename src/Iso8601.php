@@ -14,7 +14,7 @@ use function is_string;
 final class Iso8601 implements Iso8601Interface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function convertOne(string $dateTime): string
     {
@@ -22,7 +22,7 @@ final class Iso8601 implements Iso8601Interface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function convertList(array $assocList, array $columns): array
     {

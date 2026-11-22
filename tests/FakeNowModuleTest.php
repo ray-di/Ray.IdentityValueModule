@@ -10,8 +10,6 @@ use DateTimeInterface;
 use PHPUnit\Framework\TestCase;
 use Ray\Di\Injector;
 
-use function assert;
-
 class FakeNowModuleTest extends TestCase
 {
     /** @var Injector */
@@ -32,7 +30,6 @@ class FakeNowModuleTest extends TestCase
     {
         $dateTime = $this->injector->getInstance(DateTimeInterface::class);
         $this->assertInstanceOf(DateTimeImmutable::class, $dateTime);
-        assert($dateTime instanceof DateTimeImmutable);
         $this->assertSame('1970-01-01T00:00:00+00:00', $dateTime->format(DateTime::ATOM));
     }
 }

@@ -9,7 +9,7 @@ use Ray\Di\AbstractModule;
 class FakeUuidModule extends AbstractModule
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function configure()
     {
